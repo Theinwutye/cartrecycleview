@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgCart"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtCart"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/imgCart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtLabel"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price-$"
+            app:layout_constraintLeft_toLeftOf="@+id/txtCart"
+            app:layout_constraintTop_toBottomOf="@id/txtCart" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtLabel"
+            app:layout_constraintLeft_toRightOf="@+id/txtLabel"
+
+            />
+
+        <Button
+            android:id="@+id/btnM"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="#FF9800"
+            android:text="-"
+            android:textColor="#FAF6F6"
+            android:textSize="25dp"
+            app:layout_constraintLeft_toRightOf="@+id/imgCart"
+            app:layout_constraintTop_toBottomOf="@+id/txtLabel" />
+
+        <TextView
+            android:id="@+id/txtKg"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnM"
+            app:layout_constraintLeft_toRightOf="@id/btnM" />
+
+        <Button
+            android:id="@+id/btnP"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="#FF9800"
+            android:text="+"
+            android:textColor="#FAF6F6"
+            android:textSize="25dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnM"
+            app:layout_constraintLeft_toRightOf="@+id/txtKg" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btnbackgroung"
+            android:text="$10 Discount"
+            android:textColor="#FF9800"
+            android:textSize="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
